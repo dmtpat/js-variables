@@ -29,3 +29,39 @@ console.log(cityNameConcat); // Output: "New York City"
 // Trasforma tutto in maiscuolo la stringa della variabile hello
 const upperCaseHello = hello.toUpperCase();
 console.log(upperCaseHello); // Output: "HELLO"
+
+//6. Bonus del bonus (pat)
+// suddividere shoppingList in un array di singole stringhe
+// stampare il risultato in console dei singoli elementi
+
+let startWord = 0;
+let endWord = 0;
+let arrayList = [``];
+let j = 0;
+let lastChar = shoppingList.charAt(0);
+let listLenght = shoppingList.length;
+console.log(listLenght); // output: 25
+
+for (let i = 0; i < listLenght; i++) {
+    console.log(i);
+    if (i != 0) {
+        
+       /* if ((lastChar == `,` || lastChar == ` `) && (shoppingList.charAt(i) != `,` || shoppingList.charAt(i) != ` `)) {
+            startWord = i;
+        }*/
+        
+        if ((shoppingList.charAt(i) == `,`)/* || (shoppingList.charAt(i) == ` `) */&& (lastChar != `,` || lastChar != ` `) ) {
+            lastChar = shoppingList.charAt(i);
+            endWord = i;
+            arrayList[j] = shoppingList.slice(startWord, endWord);
+            console.log(`Questo è l'elemento numero ${j} della lista ${arrayList[j]}`);
+            j++;
+            i++;
+            startWord = i+1;
+            
+        }
+    } else {
+        
+    }
+    
+}
