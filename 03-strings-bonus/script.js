@@ -43,25 +43,25 @@ let listLenght = shoppingList.length;
 console.log(listLenght); // output: 25
 
 for (let i = 0; i < listLenght; i++) {
-    console.log(i);
+    //console.log(i);
     if (i != 0) {
+        lastChar = shoppingList.charAt(i);
         
-       /* if ((lastChar == `,` || lastChar == ` `) && (shoppingList.charAt(i) != `,` || shoppingList.charAt(i) != ` `)) {
-            startWord = i;
-        }*/
-        
-        if ((shoppingList.charAt(i) == `,`)/* || (shoppingList.charAt(i) == ` `) */&& (lastChar != `,` || lastChar != ` `) ) {
-            lastChar = shoppingList.charAt(i);
+        if ((shoppingList.charAt(i) == `,`) || (shoppingList.charAt(i) == ` `) && (lastChar != `,` || lastChar != ` `)) {
             endWord = i;
             arrayList[j] = shoppingList.slice(startWord, endWord);
-            console.log(`Questo è l'elemento numero ${j} della lista ${arrayList[j]}`);
+            console.log(`Questo è l'elemento numero ${j + 1} della lista ${arrayList[j]}`);
             j++;
             i++;
-            startWord = i+1;
-            
+            //startWord = i+1;
+            if ((lastChar == `,` || lastChar == ` `) && (shoppingList.charAt(i) != `,` || shoppingList.charAt(i) != ` `)) {
+                startWord = i+1;
+            }
         }
     } else {
         
     }
     
 }
+arrayList[j] = shoppingList.slice(startWord, listLenght);
+console.log(`Questo è l'elemento numero ${j + 1} della lista ${arrayList[j]}`);
