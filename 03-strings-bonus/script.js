@@ -40,7 +40,7 @@ let arrayList = [``];
 let j = 0;
 let lastChar = shoppingList.charAt(0);
 let listLenght = shoppingList.length;
-console.log(listLenght); // output: 25
+//console.log(listLenght); // output: 25
 
 for (let i = 0; i < listLenght; i++) {
     //console.log(i);
@@ -50,7 +50,7 @@ for (let i = 0; i < listLenght; i++) {
         if ((shoppingList.charAt(i) == `,`) || (shoppingList.charAt(i) == ` `) && (lastChar != `,` || lastChar != ` `)) {
             endWord = i;
             arrayList[j] = shoppingList.slice(startWord, endWord);
-            console.log(`Questo è l'elemento numero ${j + 1} della lista ${arrayList[j]}`);
+            console.log(`Questo è l'elemento numero ${j + 1} della lista: ${arrayList[j]}`);
             j++;
             i++;
             //startWord = i+1;
@@ -64,4 +64,4 @@ for (let i = 0; i < listLenght; i++) {
     
 }
 arrayList[j] = shoppingList.slice(startWord, listLenght);
-console.log(`Questo è l'elemento numero ${j + 1} della lista ${arrayList[j]}`);
+console.log(`Questo è l'ultimo elemento, il numero ${j + 1} della lista : ${arrayList[j]}`);
