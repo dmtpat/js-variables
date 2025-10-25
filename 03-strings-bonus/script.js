@@ -12,12 +12,17 @@ console.log(cityIndex); // Output: 4
 // 2. Sottostringhe 
 // Stampa la sottostringa "York" dalla variabile city
 const citySubstring = city.slice(cityIndex , city.length);
+const citySubstringV2 = city.substring(cityIndex , city.length); //altro metodo possibile
 console.log(citySubstring); // Output: "York"
 
 // 3. Sostituzione
 // Sostituisci 'York' con 'Delhi'
 const cityReplaced = city.slice(0, cityIndex) + `Delhi`;
 console.log(cityReplaced); // Output:  "New Delhi"
+// other version
+
+const cityReplacedV2 = city.replace("York", "Delhi");
+console.log(cityReplacedV2); // Output:  "New Delhi"
 
 // 4. Template literal
 // Concatena due stringhe usando la sintassi `${var}`

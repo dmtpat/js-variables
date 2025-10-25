@@ -2,8 +2,8 @@
 // Crea una variabile chiamata name e assegnale il tuo nome.
 // Stampa il valore di nome nella console.
 
-let name = 'Patricia';
-console.log(name);
+let myName = 'Patricia';
+console.log(myName);
 
 // 2. Tipi primitivi
 // Crea tre variabili chiamate number, text e bool e assegna rispettivamente
@@ -15,8 +15,10 @@ let text = `ciao`;
 let bool = true;
 
 console.log(`questo è un numero ${number}`);
+//console.log(`questo è un numero`, number); // è un modo alternativo per creare una concatenazione
 console.log(`questa è una stringa ${text}`);
 console.log(`questo è un valore booleano ${bool}`);
+//console.log(`Dati primitivi:`, number, text, bool);
 
 
 // 3. Sostituisci null nelle righe sottostanti utilizzando operazioni con le stringhe
@@ -27,6 +29,7 @@ const firstName = 'Jane'; // NON MODIFICARE QUESTA RIGA
 const lastName = 'Smith'; // NON MODIFICARE QUESTA RIGA
 
 const fullName = firstName + ` ` + lastName;
+//const fullName =  `${firstName} ${lastName}`; // interpolare, interpolazione
 console.log(fullName); // Output: "Jane Smith"
 
 // 4. Imposta questa variabile utilizzando una proprietà
